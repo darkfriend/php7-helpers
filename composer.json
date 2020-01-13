@@ -16,6 +16,12 @@
         "darkfriend/php7-curl": "^1.0",
         "darkfriend/php7-debug": "^1.0",
         "darkfriend/php7-string": "^1.0",
-        "darkfriend/php7-type": "^1.0"
+        "darkfriend/php7-type": "^1.0",
+        "darkfriend/php7-xml": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "darkfriend\\helpers\\": "src/"
+        }
     }
 }
