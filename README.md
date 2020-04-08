@@ -1,5 +1,7 @@
 # PHP7-Helpers - классы хелперы, которые часто бывают полезны в разработке
 
+``composer require darkfriend/php7-helpers``
+
 **Структура:**
 
 * [CurlHelper](https://github.com/darkfriend/php7-curl) - очень упрощает работу с CURL
