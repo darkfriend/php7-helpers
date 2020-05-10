@@ -13,3 +13,79 @@
 * **Json** - полезные методы для работы с JSON
 * **Request** - полезные методы для работы с request
 * **Response** - полезные методы для работы с response
+* **ErrorHelper** - помощник для ошибки
+* **ReCaptchaHelper** - полезные методы для работы с Google reCaptcha
+
+## Json - полезные методы для работы с JSON
+```php
+$json = [
+    'param1' => 'value1',
+    'param2' => 'value2',
+    'param3' => 'value3',
+];
+\darkfriend\helpers\Json::encode($json); // string
+
+$jsonString = '{"param1":"value1","param2":"value2","param3":"value3"}';
+\darkfriend\helpers\Json::decode($jsonString); // array
+````
+
+## Request - полезные методы для работы с request
+```php
+// request body string
+$body = \darkfriend\helpers\Request::getBody(); 
+
+// get request body json
+$body = \darkfriend\helpers\Request::getBodyJson();
+var_dump($body); // all keys from body json
+````
+
+## Response - полезные методы для работы с response
+```php
+$jsonResponse = [
+    'param1' => 'value1',
+    'param2' => 'value2',
+    'param3' => 'value3',
+];
+// json response
+$body = \darkfriend\helpers\Response::json($jsonResponse); 
+die($body);
+// or response json string
+\darkfriend\helpers\Response::json($jsonResponse,[
+    'show' => true,
+    'die' => true,
+]);
+
+// xml response
+$body = \darkfriend\helpers\Response::xml($jsonResponse);
+die($body);
+// or response xml string
+\darkfriend\helpers\Response::xml($jsonResponse,[
+    'show' => true,
+    'die' => true,
+]);
+
+// add header
+\darkfriend\helpers\Response::setHeader([
+    'Content-Type' => 'application/json',
+    'Custom-Header' => 'custom header value',
+]);
+````
+
+## ErrorHelper - помощник для ошибки
+```php
+$errors = [
+    'err1' => 'error1',
+    'err2' => 'error2',
+    'err3' => ['error3'],
+];
+$errorString = \darkfriend\helpers\ErrorHelper::toStr($errors);
+````
+
+## ReCaptchaHelper - полезные методы для работы с Google reCaptcha
+```php
+$token = '';
+$verify = \darkfriend\helpers\ReCaptchaHelper::verify($token, [
+    'publicToken' => '',
+    'secretToken' => '',
+]);
+````

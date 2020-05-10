@@ -24,7 +24,7 @@ class Request
      * @return array|string
      * @throws JsonException
      */
-    public static function getBodyJson($params)
+    public static function getBodyJson($params=[])
     {
         $input = self::getBody();
         if($input) {

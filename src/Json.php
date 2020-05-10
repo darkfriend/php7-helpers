@@ -40,9 +40,14 @@ class Json
      */
     public static function decode($data, $params = [])
     {
-        $res = \json_decode($data, true);
+        $res = \json_decode(
+            $data,
+            true,
+            $params['depth'] ?? 512,
+            $params['options'] ?? 0
+        );
 
-        if(!static::checkException()) {
+        if(!static::checkException($params)) {
             return [];
         }
 
