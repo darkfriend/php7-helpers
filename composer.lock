@@ -1,0 +1,289 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "cbcc582766d4bc0cd335aca3df2b1b81",
+    "packages": [
+        {
+            "name": "darkfriend/php7-array",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkfriend/php7-array.git",
+                "reference": "7bfd4495fcc488a6a5611d7f0bbe3a2ee03f80d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkfriend/php7-array/zipball/7bfd4495fcc488a6a5611d7f0bbe3a2ee03f80d8",
+                "reference": "7bfd4495fcc488a6a5611d7f0bbe3a2ee03f80d8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./ArrayHelper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "darkfriend",
+                    "email": "hi@darkfriend.ru"
+                }
+            ],
+            "description": "PHP7 array helper",
+            "homepage": "https://github.com/darkfriend/php7-array",
+            "keywords": [
+                "PHP7",
+                "array",
+                "darkfriend",
+                "dev",
+                "development",
+                "helper",
+                "php"
+            ],
+            "time": "2020-04-08T00:25:54+00:00"
+        },
+        {
+            "name": "darkfriend/php7-curl",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkfriend/php7-curl.git",
+                "reference": "74e35d1ec68cf2c18f05535eeb933f412ddd6240"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkfriend/php7-curl/zipball/74e35d1ec68cf2c18f05535eeb933f412ddd6240",
+                "reference": "74e35d1ec68cf2c18f05535eeb933f412ddd6240",
+                "shasum": ""
+            },
+            "require": {
+                "darkfriend/php7-array": "*",
+                "darkfriend/php7-debug": "*",
+                "darkfriend/php7-string": "*",
+                "darkfriend/php7-xml": "^1.0",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./CurlHelper.php",
+                    "./Curl.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "darkfriend",
+                    "email": "hi@darkfriend.ru"
+                }
+            ],
+            "description": "PHP7 curl helper",
+            "homepage": "https://github.com/darkfriend/php7-curl",
+            "keywords": [
+                "PHP7",
+                "curl",
+                "darkfriend",
+                "dev",
+                "development",
+                "helper",
+                "php"
+            ],
+            "time": "2020-01-15T18:44:51+00:00"
+        },
+        {
+            "name": "darkfriend/php7-debug",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkfriend/php7-debug.git",
+                "reference": "3053e112e53ca3994669c7fe234a1881ea50be25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkfriend/php7-debug/zipball/3053e112e53ca3994669c7fe234a1881ea50be25",
+                "reference": "3053e112e53ca3994669c7fe234a1881ea50be25",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./DebugHelper.php",
+                    "./Debug.php",
+                    "./LogRotate.php",
+                    "./Log.php",
+                    "./Trace.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "darkfriend",
+                    "email": "hi@darkfriend.ru"
+                }
+            ],
+            "description": "PHP7 debug helper",
+            "homepage": "https://github.com/darkfriend/php7-debug",
+            "keywords": [
+                "PHP7",
+                "darkfriend",
+                "debug",
+                "dev",
+                "development",
+                "helper",
+                "log",
+                "logger",
+                "php",
+                "trace"
+            ],
+            "time": "2020-01-23T15:49:33+00:00"
+        },
+        {
+            "name": "darkfriend/php7-string",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkfriend/php7-string.git",
+                "reference": "41a646d56779901ce527e904d3e1818855af781c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkfriend/php7-string/zipball/41a646d56779901ce527e904d3e1818855af781c",
+                "reference": "41a646d56779901ce527e904d3e1818855af781c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./StringHelper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "darkfriend",
+                    "email": "hi@darkfriend.ru"
+                }
+            ],
+            "description": "PHP7 debug helper",
+            "homepage": "https://github.com/darkfriend/php7-string",
+            "keywords": [
+                "PHP7",
+                "darkfriend",
+                "dev",
+                "development",
+                "helper",
+                "php",
+                "string"
+            ],
+            "time": "2019-12-21T12:10:07+00:00"
+        },
+        {
+            "name": "darkfriend/php7-type",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkfriend/php7-type.git",
+                "reference": "340a63d053f62c04fc40087e4c87d52d2e7d0ef2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkfriend/php7-type/zipball/340a63d053f62c04fc40087e4c87d52d2e7d0ef2",
+                "reference": "340a63d053f62c04fc40087e4c87d52d2e7d0ef2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./TypeHelper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "darkfriend",
+                    "email": "hi@darkfriend.ru"
+                }
+            ],
+            "description": "PHP7-helper for type data",
+            "homepage": "https://github.com/darkfriend/php7-helpers",
+            "keywords": [
+                "PHP7",
+                "darkfriend",
+                "dev",
+                "development",
+                "php",
+                "types"
+            ],
+            "time": "2019-12-21T12:26:16+00:00"
+        },
+        {
+            "name": "darkfriend/php7-xml",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkfriend/php7-xml.git",
+                "reference": "82ff0740805f1c362a069101f3257c6c9c1deaa8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkfriend/php7-xml/zipball/82ff0740805f1c362a069101f3257c6c9c1deaa8",
+                "reference": "82ff0740805f1c362a069101f3257c6c9c1deaa8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "darkfriend\\helpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "darkfriend",
+                    "email": "hi@darkfriend.ru"
+                }
+            ],
+            "description": "PHP7 scripts helper for xml",
+            "homepage": "https://github.com/darkfriend/php7-xml",
+            "keywords": [
+                "PHP7",
+                "darkfriend",
+                "dev",
+                "development",
+                "helper",
+                "php",
+                "xml"
+            ],
+            "time": "2020-04-09T13:59:01+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.0"
+    },
+    "platform-dev": []
+}
