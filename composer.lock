@@ -149,16 +149,16 @@
         },
         {
             "name": "darkfriend/php7-string",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/darkfriend/php7-string.git",
-                "reference": "41a646d56779901ce527e904d3e1818855af781c"
+                "reference": "37aa90f6890dc69d10c0506d90c6c4e2006dfd82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/darkfriend/php7-string/zipball/41a646d56779901ce527e904d3e1818855af781c",
-                "reference": "41a646d56779901ce527e904d3e1818855af781c",
+                "url": "https://api.github.com/repos/darkfriend/php7-string/zipball/37aa90f6890dc69d10c0506d90c6c4e2006dfd82",
+                "reference": "37aa90f6890dc69d10c0506d90c6c4e2006dfd82",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +188,7 @@
                 "php",
                 "string"
             ],
-            "time": "2019-12-21T12:10:07+00:00"
+            "time": "2020-08-09T10:59:40+00:00"
         },
         {
             "name": "darkfriend/php7-type",
