@@ -15,6 +15,7 @@
 * **Response** - полезные методы для работы с response
 * **ErrorHelper** - помощник для ошибки
 * **ReCaptchaHelper** - полезные методы для работы с Google reCaptcha
+* **DateTimeHelper** - полезные хелперы для работы с датой
 
 ## Json - полезные методы для работы с JSON
 ```php
@@ -88,4 +89,24 @@ $verify = \darkfriend\helpers\ReCaptchaHelper::verify($token, [
     'publicToken' => '',
     'secretToken' => '',
 ]);
+````
+
+## DateTimeHelper - полезные хелперы для работы с датой
+
+#### Узнать возраст (кол-во годов)
+```php
+$age = \darkfriend\helpers\DateTimeHelper::getAge('1992-05-16'); // 28 (by from 3 october 2020)
+// or
+$age = \darkfriend\helpers\DateTimeHelper::getAge('1992-05-16', '2020-10-03'); // 28 (by from 3 october 2020)
+````
+
+#### Узнать кол-во секунд до конца дня
+```php
+$seconds = \darkfriend\helpers\DateTimeHelper::getAmountEndDay();
+````
+
+#### Узнать кол-во секунд между сейчас и определенной датой
+```php
+$endTime = strtotime("tomorrow") - 1;
+$seconds = \darkfriend\helpers\DateTimeHelper::getAmountSeconds($endTime);
 ````
