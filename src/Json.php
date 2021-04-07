@@ -42,7 +42,7 @@ class Json
     {
         $res = \json_decode(
             $data,
-            true,
+            $params['array'] ?? true,
             $params['depth'] ?? 512,
             $params['options'] ?? 0
         );

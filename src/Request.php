@@ -10,25 +10,55 @@ namespace darkfriend\helpers;
  */
 class Request
 {
+    public static $headerCollection;
+
     /**
      * @return string
      */
     public static function getBody()
     {
-        return trim(file_get_contents('php://input'));
+        return \trim(\file_get_contents('php://input'));
+    }
+
+    /**
+     * Get query string
+     * @return string
+     */
+    public static function getQueryString()
+    {
+        return isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : '';
     }
 
     /**
      * Get json from request body
-     * @param array $params
+     * @param array $options
      * @return array|string
      * @throws JsonException
      */
-    public static function getBodyJson($params=[])
+    public static function getBodyJson($options=[])
     {
         $input = self::getBody();
         if($input) {
-            $input = Json::decode($input, $params);
+            $input = Json::decode($input, $options);
+        }
+        return $input;
+    }
+
+    /**
+     * Get json from request body or query string
+     * @param array $options
+     * @return array|string
+     * @throws JsonException
+     */
+    public static function getJsonParams($options=[])
+    {
+        if($_SERVER['REQUEST_METHOD'] === 'GET') {
+            $input = static::getQueryString();
+        } else {
+            $input = static::getBody();
+        }
+        if($input) {
+            $input = Json::decode($input, $options);
         }
         return $input;
     }
@@ -43,7 +73,7 @@ class Request
      */
     public static function getBodyXml($params)
     {
-        $input = self::getBody();
+        $input = static::getBody();
 
         if(!isset($params['decode'])) {
             $params['decode'] = true;
@@ -104,7 +134,28 @@ class Request
         if($strict) {
             return TypeHelper::toStrict($_GET[$param]);
         } else {
-            return $_POST[$param];
+            return null;
         }
+    }
+
+    /**
+     * Get header collection
+     * @return HeaderCollection
+     */
+    public static function getHeader(): HeaderCollection
+    {
+        if(static::$headerCollection === null) {
+            static::$headerCollection = new HeaderCollection();
+        }
+        return static::$headerCollection;
+    }
+
+    /**
+     * Get bearer token
+     * @return string
+     */
+    public static function getBearerToken(): string
+    {
+        return BearerAuth::getToken(static::getHeader());
     }
 }
